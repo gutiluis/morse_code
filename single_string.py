@@ -1,3 +1,8 @@
+# class dictionary
+# class dicionary keys
+# class dictionary items
+# class dictionary values
+
 # return a single string with the word apple translated into morse code
 def morse_code(word):
     morse_dict = {
@@ -28,6 +33,9 @@ def morse_code(word):
         "z": "dash-dash-dot-dot"
     }
 
-    var = morse_dict["a"] + "-" + morse_dict["p"] + "-" + morse_dict["p"] + "-" + morse_dict["l"] + "-" + morse_dict["e"]
-    return var
-
+    morse_list = []
+    for key in word:
+        if key in morse_dict:
+            morse_list.append(morse_dict[key])
+    morse_string = " ".join(morse_list)
+    return morse_string
